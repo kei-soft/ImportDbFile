@@ -14,6 +14,7 @@ namespace ImportDbFile
         {
             InitializeComponent();
 
+            // DB 파일 유무에 따른 표시
             this.pathLabel.Text = "PATH : " + dbFilePath;
             this.pathExistLabel.Text = "EXIST : " + File.Exists(dbFilePath).ToString();
         }

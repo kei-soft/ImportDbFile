@@ -11,6 +11,7 @@ namespace ImportDbFile
         {
             InitializeComponent();
 
+            // DB 파일 경로
             string dbFilePath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.Personal), "TEST.db");
 
             MainPage = new MainPage(dbFilePath);
