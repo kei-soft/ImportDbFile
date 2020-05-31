@@ -40,10 +40,12 @@ namespace ImportDbFile.iOS
             return base.FinishedLaunching(app, options);
         }
 
+        #region CopyDatabaseIfNotExists(dbPath)
+
         /// <summary>
         /// 해당 경로에 DB 파일을 복사합니다.
         /// </summary>
-        /// <param name="dbPath"></param>
+        /// <param name="dbPath">db파일 경로</param>
         private void CopyDatabaseIfNotExists(string dbPath)
         {
             if (!File.Exists(dbPath))
@@ -52,5 +54,7 @@ namespace ImportDbFile.iOS
                 File.Copy(existingDb, dbPath);
             }
         }
+
+        #endregion
     }
 }

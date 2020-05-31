@@ -36,10 +36,12 @@ namespace ImportDbFile.Droid
             base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
         }
 
+        #region CopyDatabaseIfNotExists(dbPath)
+
         /// <summary>
         /// DB 파일을 복사합니다.
         /// </summary>
-        /// <param name="dbPath"></param>
+        /// <param name="dbPath">db 파일 경로</param>
         private static void CopyDatabaseIfNotExists(string dbPath)
         {
             if (!File.Exists(dbPath))
@@ -58,5 +60,7 @@ namespace ImportDbFile.Droid
                 }
             }
         }
+
+        #endregion
     }
 }
